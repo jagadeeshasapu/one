@@ -6,30 +6,33 @@
     <title>NexusShop — Modern E‑Commerce</title>
 
     <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)" crossorigin="anonymous">
 
     <style>
         /* ========== ROOT VARIABLES ========== */
         :root {
-            --bg: #fafaf8;
-            --bg-card: #ffffff;
-            --primary: #1a1a2e;
-            --primary-light: #2d2d44;
+            --bg: #0f0f1a;
+            --bg-card: #1a1a2e;
+            --primary: #e8e8f0;
+            --primary-light: #c0c0d0;
             --accent: #e07a5f;
-            --accent-light: #f4d0c4;
-            --accent-dark: #c05a3e;
-            --muted: #6b6b7a;
-            --muted-light: #a0a0b0;
-            --surface: #f0efed;
+            --accent-light: #3d201a;
+            --accent-dark: #f09078;
+            --muted: #9090a8;
+            --muted-light: #686880;
+            --surface: #1e1e34;
+            --surface-hover: #2a2a44;
             --success: #2a9d8f;
             --warning: #e9c46a;
             --radius: 16px;
             --radius-sm: 10px;
-            --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
-            --shadow-hover: 0 12px 48px rgba(26, 26, 46, 0.10);
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.30);
+            --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.45);
             --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             --container: 1240px;
+            --border-subtle: rgba(255, 255, 255, 0.06);
+            --border-medium: rgba(255, 255, 255, 0.10);
         }
 
         /* ========== RESET & BASE ========== */
@@ -115,38 +118,38 @@
             background: var(--accent-dark);
             border-color: var(--accent-dark);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(224, 122, 95, 0.30);
+            box-shadow: 0 8px 28px rgba(224, 122, 95, 0.35);
         }
         .btn-secondary {
             background: var(--primary);
-            color: #fff;
+            color: #1a1a2e;
             border-color: var(--primary);
         }
         .btn-secondary:hover {
-            background: var(--primary-light);
-            border-color: var(--primary-light);
+            background: #fff;
+            border-color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 26, 46, 0.20);
+            box-shadow: 0 8px 24px rgba(232, 232, 240, 0.20);
         }
         .btn-outline {
             background: transparent;
             color: var(--primary);
-            border-color: rgba(26, 26, 46, 0.15);
+            border-color: var(--border-medium);
         }
         .btn-outline:hover {
             background: var(--primary);
-            color: #fff;
+            color: #1a1a2e;
             border-color: var(--primary);
             transform: translateY(-2px);
         }
         .btn-ghost {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
             color: #fff;
-            border-color: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.18);
         }
         .btn-ghost:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.16);
+            border-color: rgba(255, 255, 255, 0.30);
             transform: translateY(-2px);
         }
         .btn-sm {
@@ -159,10 +162,10 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(26, 26, 46, 0.04);
+            background: rgba(15, 15, 26, 0.90);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
         }
         .header-inner {
             display: flex;
@@ -255,7 +258,7 @@
             border-radius: 50%;
             display: grid;
             place-items: center;
-            border: 2px solid #fff;
+            border: 2px solid var(--bg);
         }
 
         .search-wrap {
@@ -270,8 +273,8 @@
         }
         .search-wrap:focus-within {
             border-color: var(--accent);
-            background: #fff;
-            box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.10);
+            background: var(--surface-hover);
+            box-shadow: 0 0 0 4px rgba(224, 122, 95, 0.12);
         }
         .search-wrap input {
             border: 0;
@@ -307,12 +310,13 @@
         }
         .mobile-toggle:hover {
             background: var(--accent-light);
+            color: var(--accent);
         }
 
         #mobileMenu {
             display: none;
-            background: #fff;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-subtle);
             padding: 12px 0 20px;
         }
         #mobileMenu ul {
@@ -349,14 +353,14 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 20px 24px 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            background: linear-gradient(135deg, #0d0d1f 0%, #1a1a38 50%, #16213e 100%);
         }
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-            opacity: 0.35;
+            background: url('[images.unsplash.com](https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=80)') center/cover no-repeat;
+            opacity: 0.18;
             z-index: 0;
         }
         .hero .container {
@@ -365,7 +369,7 @@
         }
         .hero .badge {
             display: inline-block;
-            background: rgba(224, 122, 95, 0.20);
+            background: rgba(224, 122, 95, 0.18);
             color: var(--accent);
             padding: 4px 16px;
             border-radius: 999px;
@@ -384,7 +388,7 @@
             margin-bottom: 16px;
         }
         .hero p {
-            color: rgba(255, 255, 255, 0.80);
+            color: rgba(255, 255, 255, 0.70);
             font-size: 17px;
             max-width: 520px;
             margin-bottom: 28px;
@@ -447,12 +451,13 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             cursor: pointer;
-            border: 2px solid transparent;
+            border: 1px solid var(--border-subtle);
         }
         .cat-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--accent-light);
+            border-color: var(--accent);
+            background: var(--surface-hover);
         }
         .cat-card .icon-wrap {
             width: 56px;
@@ -494,7 +499,7 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            border: 2px solid transparent;
+            border: 1px solid var(--border-subtle);
         }
         .product-card:hover {
             transform: translateY(-6px);
@@ -530,7 +535,7 @@
         }
         .product-card .badge.sale {
             background: var(--warning);
-            color: var(--primary);
+            color: #1a1a2e;
         }
         .product-card .wish-btn {
             position: absolute;
@@ -539,7 +544,7 @@
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.90);
+            background: rgba(15, 15, 26, 0.75);
             display: grid;
             place-items: center;
             font-size: 16px;
@@ -548,7 +553,7 @@
             backdrop-filter: blur(4px);
         }
         .product-card .wish-btn:hover {
-            background: #fff;
+            background: rgba(15, 15, 26, 0.95);
             color: var(--accent);
             transform: scale(1.10);
         }
@@ -611,8 +616,8 @@
             flex: 1;
             padding: 10px;
             border-radius: var(--radius-sm);
-            background: var(--primary);
-            color: #fff;
+            background: var(--surface);
+            color: var(--primary);
             font-weight: 600;
             font-size: 14px;
             transition: var(--transition);
@@ -620,13 +625,18 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            border: 1px solid var(--border-medium);
         }
         .product-card .footer .add-btn:hover {
             background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
             transform: scale(1.02);
         }
         .product-card .footer .add-btn.added {
             background: var(--success);
+            border-color: var(--success);
+            color: #fff;
         }
 
         /* ========== DEAL ========== */
@@ -637,6 +647,7 @@
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
+            border: 1px solid var(--border-subtle);
         }
         .deal-wrap .deal-img {
             flex: 0 0 48%;
@@ -658,7 +669,7 @@
         .deal-wrap .deal-content .tag {
             display: inline-block;
             background: var(--warning);
-            color: var(--primary);
+            color: #1a1a2e;
             padding: 4px 14px;
             border-radius: 999px;
             font-size: 12px;
@@ -704,23 +715,26 @@
             margin: 16px 0 20px;
         }
         .timer-box {
-            background: var(--primary);
-            color: #fff;
+            background: var(--surface);
+            color: var(--primary);
             padding: 10px 16px;
             border-radius: var(--radius-sm);
             min-width: 68px;
             text-align: center;
+            border: 1px solid var(--border-subtle);
         }
         .timer-box .num {
             font-size: 26px;
             font-weight: 700;
             line-height: 1.2;
+            color: #fff;
         }
         .timer-box .label {
             font-size: 11px;
-            opacity: 0.70;
+            opacity: 0.60;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            color: var(--muted-light);
         }
 
         /* ========== TESTIMONIALS ========== */
@@ -739,6 +753,10 @@
             background: var(--accent-light);
             border-radius: 999px;
         }
+        .testimonials-scroll::-webkit-scrollbar-track {
+            background: var(--surface);
+            border-radius: 999px;
+        }
         .testimonial-card {
             flex: 0 0 340px;
             background: var(--bg-card);
@@ -747,9 +765,11 @@
             box-shadow: var(--shadow);
             scroll-snap-align: start;
             transition: var(--transition);
+            border: 1px solid var(--border-subtle);
         }
         .testimonial-card:hover {
             box-shadow: var(--shadow-hover);
+            border-color: var(--border-medium);
         }
         .testimonial-card .stars {
             color: #f5a623;
@@ -787,7 +807,7 @@
 
         /* ========== NEWSLETTER ========== */
         .newsletter-wrap {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, #1a1a38 0%, #16213e 50%, #1a1a2e 100%);
             border-radius: var(--radius);
             padding: 48px 56px;
             color: #fff;
@@ -796,6 +816,7 @@
             justify-content: space-between;
             gap: 32px;
             flex-wrap: wrap;
+            border: 1px solid var(--border-subtle);
         }
         .newsletter-wrap .text h3 {
             font-size: 26px;
@@ -803,7 +824,7 @@
             margin-bottom: 4px;
         }
         .newsletter-wrap .text p {
-            opacity: 0.75;
+            opacity: 0.70;
             font-size: 15px;
         }
         .newsletter-wrap form {
@@ -820,17 +841,17 @@
             border-radius: 999px;
             border: 0;
             font-size: 15px;
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.08);
             color: #fff;
             transition: var(--transition);
             outline: 2px solid transparent;
         }
         .newsletter-wrap form input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.40);
         }
         .newsletter-wrap form input:focus {
             outline-color: var(--accent);
-            background: rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.14);
         }
         .newsletter-wrap form .btn {
             background: var(--accent);
@@ -853,7 +874,7 @@
         footer {
             margin-top: 16px;
             padding: 44px 0 28px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid var(--border-subtle);
         }
         .footer-grid {
             display: grid;
@@ -914,7 +935,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(26, 26, 46, 0.04);
+            border-top: 1px solid var(--border-subtle);
             color: var(--muted-light);
             font-size: 13px;
         }
@@ -1234,7 +1255,7 @@
                 </div>
                 <div class="deal-wrap">
                     <div class="deal-img">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80" alt="MacBook Air M2" loading="lazy">
+                        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80)" alt="MacBook Air M2" loading="lazy">
                     </div>
                     <div class="deal-content">
                         <span class="tag"><i class="fas fa-bolt"></i> Limited Offer</span>
@@ -1366,53 +1387,53 @@
 
         const PRODUCTS = [
             { id: 1, title: 'iPhone 14 Pro Max', price: 1099, oldPrice: 1199, rating: 5, reviews: 128, badge: 'New',
-                img: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80)',
                 category: 'Smartphones' },
             { id: 2, title: 'MacBook Pro 14"', price: 1999, rating: 4, reviews: 86, badge: '',
-                img: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80)',
                 category: 'Laptops' },
             { id: 3, title: 'Apple Watch Series 8', price: 349, oldPrice: 399, rating: 5, reviews: 214, badge: 'Sale',
-                img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=600&q=80)',
                 category: 'Accessories' },
             { id: 4, title: 'Nike Air Max 270', price: 150, rating: 4, reviews: 53, badge: '',
-                img: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80)',
                 category: 'Footwear' },
             { id: 5, title: 'Sony A7 IV Camera', price: 2499, rating: 5, reviews: 42, badge: 'New',
-                img: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80)',
                 category: 'Gadgets' },
             { id: 6, title: 'Chanel No. 5', price: 120, rating: 5, reviews: 189, badge: '',
-                img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80)',
                 category: 'Accessories' },
             { id: 7, title: 'Travel Backpack', price: 79, oldPrice: 99, rating: 4, reviews: 67, badge: 'Sale',
-                img: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80)',
                 category: 'Accessories' },
             { id: 8, title: 'Sony WH-1000XM5', price: 399, rating: 5, reviews: 156, badge: '',
-                img: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80',
+                img: '[images.unsplash.com](https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=600&q=80)',
                 category: 'Gadgets' }
         ];
 
         const TESTIMONIALS = [{
             name: 'Ava Martin',
             role: 'Verified Buyer',
-            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80',
+            avatar: '[images.unsplash.com](https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80)',
             text: 'Fast shipping and excellent support. The product exceeded my expectations!',
             stars: 5
         }, {
             name: 'Michael Lee',
             role: 'Frequent Shopper',
-            avatar: 'https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=80&q=80',
+            avatar: '[images.unsplash.com](https://images.unsplash.com/photo-1546456073-6712f79251bb?auto=format&fit=crop&w=80&q=80)',
             text: 'Great selection and smooth checkout. Will definitely shop again.',
             stars: 4
         }, {
             name: 'Sophia Chen',
             role: 'Designer',
-            avatar: 'https://images.unsplash.com/photo-1494790108378-be9c29b29330?auto=format&fit=crop&w=80&q=80',
+            avatar: '[images.unsplash.com](https://images.unsplash.com/photo-1494790108378-be9c29b29330?auto=format&fit=crop&w=80&q=80)',
             text: 'Love the quality and the packaging. Everything arrived in perfect condition.',
             stars: 5
         }, {
             name: 'James Wilson',
             role: 'Tech Enthusiast',
-            avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80',
+            avatar: '[images.unsplash.com](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80)',
             text: 'Amazing prices on electronics. The M2 MacBook deal was unbeatable.',
             stars: 5
         }];
@@ -1701,7 +1722,7 @@
             }
         });
 
-        console.log('🚀 NexusShop — user‑friendly e‑commerce demo loaded.');
+        console.log('🚀 NexusShop — dark mode e‑commerce demo loaded.');
     </script>
 
 </body>
